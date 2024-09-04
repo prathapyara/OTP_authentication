@@ -1,6 +1,19 @@
 import mongoose from "mongoose";
+import dotenv from "dotenv"
 
-export const connect=()=>{
-    mongoose.connect("mongodb://127.0.0.1:27017/otpDB");
+dotenv.config();
+
+export const connect=async()=>{
+    try{
+        await mongoose.connect(process.env.MONGO_URL, {
+            useNewUrlParser: true,
+            useUnifiedTopology: true,
+        });
+        console.log("connected to mongodb")
+    }
+    catch(err){
+        console.log("connection failed",err);
+    }
+    
 }
 

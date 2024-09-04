@@ -14,7 +14,8 @@ const UserSchema=new mongoose.Schema({
     },
     email:{
         type:String,
-        require:[true,"Please provide a unique email"]
+        require:[true,"Please provide a unique email"],
+        unique:[true,"Email Exit"]
     },
     firstName:{type:String},
     lastName:{type:String},

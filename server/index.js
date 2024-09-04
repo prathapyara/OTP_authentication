@@ -4,8 +4,6 @@ import dotenv from "dotenv";
 import { connect } from "./database/conn.js";
 import router from "./router/route.js";
 
-
-
 dotenv.config();
 
 connect();
