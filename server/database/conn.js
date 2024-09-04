@@ -9,7 +9,7 @@ export const connect=async()=>{
             useNewUrlParser: true,
             useUnifiedTopology: true,
         });
-        console.log("connected to mongodb")
+        console.log("connected to mongodb server")
     }
     catch(err){
         console.log("connection failed",err);
